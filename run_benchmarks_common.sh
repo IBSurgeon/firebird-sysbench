@@ -58,6 +58,9 @@ esac
 # ldconfig cache by default, so the version measured depends on the loader.
 FB_CLIENT=""
 if [ "$DB_DRIVER" = firebird ]; then
+  # More driver options, for example
+  # FIREBIRD_ARGS="--firebird-autocommit=server".
+  DB_ARGS="$DB_ARGS ${FIREBIRD_ARGS:-}"
   if [ -n "${FIREBIRD_CLIENT:-}" ]; then
     DB_ARGS="$DB_ARGS --firebird-client=$FIREBIRD_CLIENT"
     FB_CLIENT="$FIREBIRD_CLIENT"

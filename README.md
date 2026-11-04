@@ -209,6 +209,7 @@ TRANSPORT=local ./run_benchmarks.sh mysql
 | `WARMUP` | `10` | Seconds of `--warmup-time` before each timed run |
 | `FIREBIRD_LINGER` | `60` | `ALTER DATABASE SET LINGER` value set once before the runs, so that the Firebird cache stays warm between sysbench processes |
 | `PREPARE_THREADS` | `1` | Threads for `prepare` |
+| `FIREBIRD_ARGS` | empty | More Firebird driver options, for example `--firebird-autocommit=server` |
 
 The results file starts with the transport, the warm-up and one line of
 server settings (version, cache, durability and, for Firebird, Forced
